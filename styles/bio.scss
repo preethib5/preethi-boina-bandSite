@@ -190,15 +190,15 @@
         color: #FFFFFF;
         @media(min-width: $table-size-min) {
             display: flex;
-            padding: 3rem 2rem;
+            padding: 1rem 3rem;
         }
         &__main {
             @media(min-width: $destop-size) {
-                padding: 3rem 2rem;
+                padding: 1rem 3rem;
             }
         }
         &__social {
-            @media(min-width: $table-size-min) and (max-width: $destop-size) {
+            @media(min-width: $table-size-min) {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -206,12 +206,47 @@
                 padding-bottom: 1rem;
             }
         }
-        h3 {
+        &__header {
             display: flex;
             justify-content: flex-start;
+            @media(min-width: $table-size-min) {
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 44px;
+            }
+        }
+        &__social-links {
+            &--img1 {
+                @media(min-width: $table-size-min) {
+                    padding-right: 0rem;
+                }
+            }
+            &--img2 {
+                position: relative;
+                left: 1rem;
+                @media(min-width: $table-size-min) {
+                    padding-right: 0rem;
+                    position: relative;
+                    right: 15rem;
+                }
+            }
+            &--img3 {
+                position: relative;
+                left: 2rem;
+                @media(min-width: $table-size-min) {
+                    padding-right: 0rem;
+                    position: relative;
+                    right: 10rem;
+                }
+            }
+        }
+        &__logo {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-end;
         }
         &__address {
-            @media(min-width: $table-size-min) and (max-width: $destop-size) {
+            @media(min-width: $table-size-min) {
                 padding-bottom: 1rem;
             }
         }
