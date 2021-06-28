@@ -1,6 +1,15 @@
     @use './partials/variables';
     @use './partials/font';
     @use './partials/mixin' as *;
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Avenir Next';
+    }
+    
     .heading {
         background-color: #323232;
     }
@@ -241,18 +250,44 @@
             }
         }
         &__logo {
-            display: flex;
-            flex-direction: column;
-            align-self: flex-end;
+            &--change {
+                position: relative;
+                top: 35rem;
+                @media(min-width: $table-size-min) {
+                    padding: 1rem 3rem;
+                    align-self: start;
+                    position: relative;
+                    top: 0rem;
+                    font-size: 14px;
+                }
+            }
         }
-        &__address {
+        &__address1 {
             @media(min-width: $table-size-min) {
                 padding-bottom: 1rem;
             }
+            &--email {
+                text-decoration: none;
+                color: #FFFFFF;
+            }
         }
-        &__email a {
-            text-decoration: none;
-            color: #FFFFFF;
-            padding-bottom: 1rem;
+        &__space {
+            padding-top: 2rem;
+            font-weight: 400;
+        }
+        &__info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            @media(min-width: $table-size-min) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            &--email {
+                text-decoration: none;
+                color: #FFFFFF;
+            }
         }
     }
