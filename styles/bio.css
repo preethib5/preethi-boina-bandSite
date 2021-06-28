@@ -417,11 +417,11 @@
   }
 }
 @media (min-width: 768px) {
-  .footer__address1 {
+  .footer__address {
     padding-bottom: 1rem;
   }
 }
-.footer__address1--email {
+.footer__address--email {
   text-decoration: none;
   color: #FFFFFF;
 }
@@ -433,6 +433,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  line-height: 18px;
 }
 @media (min-width: 768px) {
   .footer__info {
@@ -440,6 +441,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    line-height: 18px;
   }
 }
 .footer__info--email {
