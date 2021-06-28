@@ -1,0 +1,218 @@
+@import './variables';
+@mixin mobile-layout {
+    @media screen and (max-width: $Mobile-size-max) {
+        @content;
+    }
+}
+
+@mixin tablet-layout {
+    @media (min-width: $table-size-min) and (max-width: $table-size-max) {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 2.5rem;
+    }
+}
+
+@mixin tablet-layout1 {
+    @media (min-width: $table-size-min) and (max-width: $table-size-max) {
+        width: auto;
+        padding-top: 24px;
+        padding-left: 2.0rem;
+    }
+}
+
+@mixin tablet-layout2 {
+    @media (min-width: $table-size-min) and (max-width: $table-size-max) {
+        width: auto;
+        font-size: 14px;
+        margin-right: 24px;
+        padding-bottom: 24px;
+        font-weight: 600;
+    }
+}
+
+@mixin tablet-layout3 {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        padding-left: 2rem;
+        font-size: 60px;
+    }
+}
+
+@mixin tablet-layout4 {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+}
+
+@mixin tablet-layout5 {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        font-size: 60px;
+        padding-bottom: 2rem;
+    }
+}
+
+@mixin tablet-layout6 {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        min-width: 80%;
+        align-self: center;
+        font-size: 24px;
+    }
+}
+
+@mixin tablet-layout7 {
+    @media (min-width: $table-size-min) {
+        font-size: 24px;
+        line-height: 18px;
+        font-weight: 600;
+        padding-top: 2.5rem;
+        margin-left: 1rem;
+    }
+}
+
+@mixin tablet-layout8 {
+    @media (min-width: $table-size-min) {
+        margin: 0 10%;
+        display: flex;
+    }
+}
+
+@mixin tablet-layout9 {
+    @media (min-width: $table-size-min) {
+        justify-content: space-between;
+    }
+}
+
+@mixin tablet-layout10 {
+    @media (min-width: $table-size-min) {
+        font-size: 14px;
+        font-weight: 400;
+        padding-right: 2rem;
+        position: relative;
+        right: 3.5rem;
+        line-height: 22px;
+    }
+}
+
+@mixin tablet-layout11 {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        padding-top: 3rem;
+        padding-bottom: 1.5rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+@mixin tablet-layout12 {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 44px;
+    }
+}
+
+@mixin tablet-layout13 {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+@mixin tablet-layout14 {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        width: calc(33.33%-(48px/3));
+        padding-bottom: 1.5rem;
+    }
+}
+
+@mixin desktop-layout {
+    @media (min-width: $destop-size) {
+        padding-left: 10%;
+    }
+}
+
+@mixin desktop-layout2 {
+    @media (min-width: $destop-size) {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+}
+
+@mixin desktop-layout3 {
+    @media (min-width: $destop-size) {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    background-color: #323232;
+    color: #FFFFFF;
+}
+
+@mixin flex-mobile-section {
+    padding: 1.5rem 1rem;
+}
+
+@mixin flex-mobile-gallery {
+    padding: 1.5rem 1rem 1rem 1rem;
+}
+
+@mixin flex-desktop {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+}
+
+@mixin header-dt-font {
+    font-family: 'Avenir Next';
+    font-weight: 700;
+    font-size: $font-dt-header;
+    line-height: 68px;
+}
+
+@mixin header-m-font {
+    font-family: 'Avenir Next';
+    font-weight: 700;
+    font-size: $font-m-header-secheader;
+    line-height: 32px;
+}
+
+@mixin secheader-dt-font {
+    font-family: 'Avenir Next';
+    font-weight: 700;
+    font-size: $font-dt-section-header;
+    line-height: 44px;
+    color: #FFFFFF;
+}
+
+@mixin subheader-dt-font {
+    font-family: 'Avenir Next';
+    font-weight: 600;
+    font-size: $font-dt-subsection-header;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+
+@mixin body-dt-font {
+    font-family: 'Avenir Next';
+    font-weight: 400;
+    font-size: $font-dt-body-footer;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+@mixin footer-dt-font {
+    font-family: 'Avenir Next';
+    font-weight: 400;
+    font-size: $font-dt-body-footer;
+    line-height: 20px;
+    color: #FFFFFF;
+}

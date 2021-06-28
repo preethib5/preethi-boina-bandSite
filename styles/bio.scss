@@ -1,0 +1,223 @@
+    @use './partials/variables';
+    @use './partials/font';
+    @use './partials/mixin' as *;
+    .heading {
+        background-color: #323232;
+    }
+    
+    .menu {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include tablet-layout;
+        @include desktop-layout;
+        &__logo {
+            display: block;
+            color: #FFFFFF;
+            text-decoration: none;
+            min-height: 1rem;
+            min-width: 5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            @include tablet-layout;
+        }
+        &__list {
+            display: flex;
+            list-style: none;
+            width: 100%;
+            justify-content: space-between;
+            @include tablet-layout1;
+        }
+        &__item {
+            display: flex;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 600;
+            width: 40%;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid white;
+            @include tablet-layout2;
+        }
+        &__item2 {
+            display: flex;
+            width: 50%;
+            padding-bottom: 8px;
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 400;
+            @include tablet-layout2;
+            &:hover {
+                color: #FFFFFF;
+                border-bottom: 2px solid white;
+            }
+        }
+        &__link {
+            display: block;
+            color: $text-color;
+            text-decoration: none;
+        }
+        &__link2 {
+            display: block;
+            color: $text-color;
+            text-decoration: none;
+            &:hover {
+                color: #FFFFFF;
+            }
+        }
+    }
+    
+    .band {
+        display: flex;
+        align-items: center;
+        height: 50vh;
+        background-image: url('/assets/images/hero-bio.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        &__header {
+            font-size: 24px;
+            color: #FFFFFF;
+            padding-left: 2rem;
+            position: relative;
+            @include tablet-layout3;
+            @include desktop-layout;
+        }
+    }
+    
+    .section {
+        display: flex;
+        color: #FFFFFF;
+        padding: 1.5rem 1rem;
+        @include tablet-layout4;
+        @include desktop-layout2;
+        &__heading1 {
+            font-size: 24px;
+            font-weight: 600;
+            padding-bottom: 1rem;
+            color: #323232;
+            @include tablet-layout5;
+        }
+        &__img {
+            @include tablet-layout6;
+            height: 58vw;
+        }
+        &__para1 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #323232;
+            @include tablet-layout6;
+            overflow-wrap: break-word;
+        }
+        &__auth {
+            font-size: 13px;
+            font-weight: 600;
+            color: #323232;
+            @include tablet-layout6;
+        }
+        &__heading2 {
+            font-size: 13px;
+            line-height: 18px;
+            color: #323232;
+            font-weight: 600;
+            letter-spacing: .5px;
+            padding-bottom: 1rem;
+            @include tablet-layout7;
+        }
+        &__content2 {
+            @include tablet-layout8;
+        }
+        &__para-content {
+            color: #323232;
+            @include tablet-layout9;
+        }
+        &__para2 {
+            font-size: 13px;
+            font-weight: 400;
+            color: #323232;
+            line-height: 18px;
+            @include tablet-layout10;
+        }
+        &__text {
+            font-size: 13px;
+            font-weight: 400;
+            padding-bottom: 1rem;
+            line-height: 18px;
+            @media (min-width: $table-size-min) {
+                font-size: 14px;
+                font-weight: 400;
+                padding-right: 18px;
+                padding-bottom: 0;
+                line-height: 22px;
+            }
+        }
+    }
+    
+    .photos {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 1rem 1rem 1rem;
+        justify-content: space-evenly;
+        color: #323232;
+        width: 100%;
+        @include tablet-layout11;
+        &__heading {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px;
+            @include tablet-layout12;
+        }
+        &__imgs {
+            display: flex;
+            flex-direction: column;
+            @include tablet-layout13;
+        }
+        &__images {
+            filter: grayscale(100%);
+            padding-bottom: 1rem;
+            @include tablet-layout14;
+            &:hover {
+                filter: grayscale(0%);
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 1rem 1rem 1rem;
+        background-color: #323232;
+        color: #FFFFFF;
+        @media(min-width: $table-size-min) {
+            display: flex;
+            padding: 3rem 2rem;
+        }
+        &__main {
+            @media(min-width: $destop-size) {
+                padding: 3rem 2rem;
+            }
+        }
+        &__social {
+            @media(min-width: $table-size-min) and (max-width: $destop-size) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 1rem;
+            }
+        }
+        h3 {
+            display: flex;
+            justify-content: flex-start;
+        }
+        &__address {
+            @media(min-width: $table-size-min) and (max-width: $destop-size) {
+                padding-bottom: 1rem;
+            }
+        }
+        &__email a {
+            text-decoration: none;
+            color: #FFFFFF;
+            padding-bottom: 1rem;
+        }
+    }
