@@ -13,10 +13,10 @@
     <header class="heading">
         <nav class="menu">
             <a class="menu__logo" href="./index.html">
-                <img class="menu__logo" src="./assets/logos/Logo-bandsite.svg" /></a>
+                <img class="menu__logo--img" src="./assets/logos/Logo-bandsite.svg" /></a>
             <ul class="menu__list">
                 <li class="menu__item"><a class="menu__link" href="./index.html">Biograpgy</a></li>
-                <li class="menu__item2"><a class="menu__link2" href="./index.html">Shows</a></li>
+                <li class="menu__item2"><a class="menu__link2" href="./pages/shows.html">Shows</a></li>
             </ul>
         </nav>
     </header>
@@ -64,6 +64,19 @@
         </div>
     </div>
 
+    <form id="commentForm" class="comment-form">
+        <h1 class="comment-form__header">Join the Conversation</h1>
+        <img class="comment-form__image" src="./assets/images/Mohan-muruge.jpg">
+        <label class="comment-form__name" for="name">
+            NAME <input class="comment-form__name--input" type="text" id="name" name="name" placeholder="Enter your name">
+        </label>
+        <label class="comment-form__comment" for="bodyText">
+            COMMENT
+            <textarea class="comment-form__comment--textArea" rows="5" col="30" id="bodyText" name="bodyText" placeholder="Add a new comment"></textarea>
+        </label>
+        <button class="comment-form__btn" type="submit" id="submit">COMMENT</button>
+    </form>
+    <section id="container" class="container"></section>
     <footer class="footer">
         <main class="footer_main">
             <section class="footer__social">
@@ -113,6 +126,8 @@
             </div>
         </main>
     </footer>
+    <script src="./scripts/index-page.js"></script>
+
 </body>
 
 </html>

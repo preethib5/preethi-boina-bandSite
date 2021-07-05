@@ -1,10 +1,4 @@
 @import './variables';
-@mixin mobile-layout {
-    @media screen and (max-width: $Mobile-size-max) {
-        @content;
-    }
-}
-
 @mixin tablet-layout {
     @media (min-width: $table-size-min) and (max-width: $table-size-max) {
         display: flex;
@@ -97,7 +91,7 @@
 }
 
 @mixin tablet-layout11 {
-    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+    @media (min-width: $table-size-min) {
         padding-top: 3rem;
         padding-bottom: 1.5rem;
         padding-right: 1rem;
@@ -106,7 +100,7 @@
 }
 
 @mixin tablet-layout12 {
-    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+    @media (min-width: $table-size-min) {
         font-size: 36px;
         font-weight: 700;
         line-height: 44px;
@@ -114,18 +108,208 @@
 }
 
 @mixin tablet-layout13 {
-    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+    @media (min-width: $table-size-min) {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         flex-wrap: wrap;
     }
 }
 
 @mixin tablet-layout14 {
-    @media (min-width: $table-size-min) and (max-width: $destop-size) {
-        width: calc(33.33% - (48px));
+    @media (min-width: $table-size-min) {
+        width: calc(33.33% - 48px);
         padding-bottom: 1.5rem;
+    }
+}
+
+@mixin tablet-container {
+    @media (max-width: $table-size-max) {
+        margin: 5rem;
+        padding: 1%;
+    }
+}
+
+@mixin tablet-album {
+    @media (min-width: $table-size-min) {
+        position: relative;
+        top: 10rem;
+        min-height: 150px;
+        left: 2rem;
+    }
+}
+
+@mixin tablet-header {
+    @media (min-width: $table-size-min) {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+    }
+}
+
+@mixin tablet-header1 {
+    @media (min-width: $table-size-min) {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 44px;
+    }
+}
+
+@mixin tablet-commentForm {
+    @media (min-width: $table-size-min) {
+        padding-left: 3rem;
+        font-size: 24px;
+        line-height: 44px;
+        font-weight: 600;
+    }
+}
+
+@mixin tablet-commentName {
+    @media (min-width: $table-size-min) {
+        padding-left: 8rem;
+        bottom: 9rem;
+    }
+}
+
+// @mixin mobile-commentName {
+//     @media (min-width: $mobile-size-max) {}
+// }
+// @mixin mobile-comment {
+//     @media (min-width: $mobile-size-max) {
+//         position: relative;
+//     }
+// }
+@mixin mobile-commentBtn {
+    @media (min-width: $table-size-min) {
+        position: relative;
+        top: 4.5rem;
+        left: 8rem;
+    }
+}
+
+@mixin mobile-img {
+    @media (min-width: $table-size-min) {
+        position: relative;
+        bottom: 3rem;
+    }
+}
+
+@mixin tablet-commentNameInput {
+    @media (min-width: $table-size-min) {
+        width: 400px;
+    }
+}
+
+@mixin tablet-comment {
+    @media (min-width: $table-size-min) {
+        padding-left: 8rem;
+        position: relative;
+        top: 5rem;
+        right: 16rem;
+    }
+}
+
+@mixin tablet-commentTextArea {
+    @media (min-width: $table-size-min) {
+        width: 400px;
+        height: 150px;
+    }
+}
+
+@mixin tablet-img {
+    @media (min-width: $table-size-min) {
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 6rem;
+    }
+}
+
+@mixin tablet-btn {
+    @media (min-width: $table-size-min) {
+        width: 200px;
+        position: relative;
+        top: 8rem;
+        right: 13rem;
+    }
+}
+
+@mixin tablet-showsHeader {
+    @media (min-width: $table-size-min) {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+@mixin tablet-showsHeaderDate {
+    @media (min-width: $table-size-min) {
+        margin-left: 1rem;
+    }
+}
+
+@mixin tablet-showsHeaderVenu {
+    @media (min-width: $table-size-min) {
+        margin-left: 9rem;
+    }
+}
+
+@mixin tablet-showsHeaderLocation {
+    @media (min-width: $table-size-min) {
+        margin-left: 6.5rem;
+    }
+}
+
+@mixin tablet-showsBody {
+    @media (min-width: $table-size-min) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        height: 50px;
+        width: 100%;
+    }
+}
+
+@mixin tablet-showsBodyContent {
+    @media (min-width: $table-size-min) {
+        line-height: 24px;
+        border-bottom: 1px solid #AFAFAF;
+        width: 100%;
+    }
+}
+
+@mixin tablet-showsBodyDate {
+    @media (min-width: $table-size-min) {
+        padding: 0.5rem;
+        bottom: 1rem;
+        margin-left: .5rem;
+        white-space: nowrap;
+    }
+}
+
+@mixin tablet-showsBodyVenu {
+    @media (min-width: $table-size-min) {
+        bottom: 1rem;
+        margin-left: 5.5rem;
+        white-space: nowrap;
+    }
+}
+
+@mixin tablet-showsBodyLocation {
+    @media (min-width: $table-size-min) {
+        bottom: 1rem;
+        margin-left: 5.5rem;
+        white-space: nowrap;
+    }
+}
+
+@mixin tablet-showsBodyButton {
+    @media (min-width: $table-size-min) {
+        padding: 0.5rem;
+        position: relative;
+        bottom: 1.5rem;
+        margin-left: 5.5rem;
+        width: 150px;
     }
 }
 
