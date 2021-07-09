@@ -58,6 +58,14 @@
         top: 2rem;
         left: 2.5rem;
     }
+    &__containerHeaderHidden {
+        visibility: hidden;
+        @include tablet-showsHeaderDisplay
+    }
+    // &__dateHeaderHidden {
+    //     visibility: hidden;
+    //     @include tablet-showsHeaderDisplay
+    //}
     &__containerHeader {
         display: flex;
         align-items: flex-start;

@@ -88,6 +88,22 @@
   top: 2rem;
   left: 2.5rem;
 }
+.shows__containerHeaderHidden {
+  visibility: hidden;
+}
+@media (min-width: 767px) {
+  .shows__containerHeaderHidden {
+    visibility: visible;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 4rem;
+    right: 7.5rem;
+    color: #AFAFAF;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
 .shows__containerHeader {
   display: flex;
   align-items: flex-start;
@@ -101,6 +117,7 @@
   .shows__containerHeader {
     flex-direction: row;
     justify-content: flex-start;
+    visibility: hidden;
   }
 }
 .shows__dateHeader {

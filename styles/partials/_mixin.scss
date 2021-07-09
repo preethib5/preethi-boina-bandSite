@@ -239,6 +239,21 @@
     @media (min-width: $table-size-min) {
         flex-direction: row;
         justify-content: flex-start;
+        visibility: hidden;
+    }
+}
+
+@mixin tablet-showsHeaderDisplay {
+    @media (min-width: $table-size-min) {
+        visibility: visible;
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        top: 4rem;
+        right: 7.5rem;
+        color: #AFAFAF;
+        font-size: 14px;
+        font-weight: 400;
     }
 }
 
