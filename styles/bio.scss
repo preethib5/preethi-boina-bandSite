@@ -18,6 +18,9 @@
     
     .heading {
         background-color: #323232;
+        width: 100%;
+        @include tablet-heading;
+        @include desktop-heading;
     }
     
     .menu {
@@ -52,9 +55,9 @@
         }
         &__item {
             display: flex;
-            font-size: 24px;
+            // font-size: 24px;
             line-height: 18px;
-            font-weight: 600;
+            // font-weight: 600;
             width: 40%;
             padding-bottom: 0.5rem;
             border-bottom: 2px solid white;
@@ -64,9 +67,9 @@
             display: flex;
             width: 50%;
             padding-bottom: 8px;
-            font-size: 24px;
+            // font-size: 24px;
             line-height: 18px;
-            font-weight: 400;
+            // font-weight: 400;
             @include tablet-layout2;
             &:hover {
                 color: #FFFFFF;
@@ -93,11 +96,14 @@
     .band {
         display: flex;
         align-items: center;
-        height: 50vh;
+        height: 50vw;
         background: linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%), url('../assets/images/hero-bio.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        width: 100%;
+        @include tablet-heading;
+        @include desktop-heading;
         &__header {
             font-size: 24px;
             color: #FFFFFF;
@@ -124,10 +130,12 @@
         &__img {
             @include tablet-layout6;
             height: 58vw;
+            width: 100%;
         }
         &__para1 {
             font-size: 13px;
             font-weight: 600;
+            line-height: 1.5rem;
             color: #323232;
             @include tablet-layout6;
             overflow-wrap: break-word;
@@ -135,6 +143,7 @@
         &__auth {
             font-size: 13px;
             font-weight: 600;
+            line-height: 1.5rem;
             color: #323232;
             @include tablet-layout6;
         }
@@ -144,7 +153,7 @@
             color: #323232;
             font-weight: 600;
             letter-spacing: .5px;
-            padding-bottom: 1rem;
+            line-height: 4rem;
             @include tablet-layout7;
         }
         &__content2 {
@@ -152,6 +161,7 @@
         }
         &__para-content {
             color: #323232;
+            padding-top: 1rem;
             @include tablet-layout9;
         }
         &__para2 {
@@ -182,17 +192,19 @@
         padding: 1.5rem 1rem 1rem 1rem;
         justify-content: space-evenly;
         color: #323232;
-        width: 100%;
+        width: 150vw;
+        background-color: #f6f6f6;
         @include tablet-layout11;
         &__heading {
             font-size: 24px;
-            font-weight: 700;
+            font-weight: 600;
             line-height: 32px;
             @include tablet-layout12;
         }
         &__imgs {
             display: flex;
             flex-direction: column;
+            width: 110vw;
             @include tablet-layout13;
         }
         &__images {
@@ -218,6 +230,8 @@
         height: 22rem;
         &__header {
             padding-bottom: 2rem;
+            font-size: 24px;
+            font-weight: 600;
             @include tablet-commentForm;
         }
         &__name {
@@ -231,7 +245,7 @@
             @include tablet-commentName;
             &--input {
                 padding: 10px;
-                width: 300px;
+                width: 100%;
                 height: 50px;
                 border-radius: 5px;
                 border: 1.5px solid #E1E1E1;
@@ -247,8 +261,8 @@
             @include tablet-comment;
             &--textArea {
                 padding: 10px;
-                width: 300px;
-                height: 100px;
+                width: 100%;
+                height: 100%;
                 border-radius: 5px;
                 border: 1.5px solid #E1E1E1;
                 @include tablet-commentTextArea;
@@ -271,19 +285,22 @@
             font-weight: 600;
             color: white;
             margin-top: 1rem;
-            width: 300px;
+            width: 100%;
             height: 50px;
+            @include mobile-btnLarge;
             @include tablet-btn;
+            // @include mobile-form;
         }
     }
     
     .container {
-        padding: 5%;
+        margin: 1rem;
         @include tablet-container;
         &__commentBox {
             padding: 1%;
             border-bottom: 1px solid #AFAFAF;
             border-top: 1px solid #AFAFAF;
+            @include tablet-container;
         }
         &__leftPanelImg {
             float: left;
@@ -301,11 +318,30 @@
             &--name {
                 color: #000;
                 margin: 1rem;
+                font-weight: 600;
+                white-space: nowrap;
             }
         }
         &__comment {
             padding: 3%;
             display: flex;
+        }
+        &__button {
+            display: flex;
+            justify-content: space-between;
+            &--img {
+                padding: 3%;
+            }
+            &--like {
+                padding: .5rem;
+            }
+            &--count {
+                padding: .5rem 0rem;
+            }
+        }
+        &__like {
+            display: flex;
+            justify-content: space-between;
         }
     }
     
@@ -315,9 +351,14 @@
         padding: 1.5rem 1rem 1rem 1rem;
         background-color: #323232;
         color: #FFFFFF;
+        width: 100%;
+        @include tablet-heading;
+        @include desktop-heading;
         @media(min-width: $table-size-min) {
             display: flex;
             padding: 1rem 3rem;
+            position: relative;
+            top: 5rem;
         }
         &__main {
             @media(min-width: $destop-size) {
@@ -340,9 +381,17 @@
                 font-size: 36px;
                 font-weight: 700;
                 line-height: 44px;
+                white-space: nowrap;
             }
         }
         &__social-links {
+            padding-top: 1rem;
+            @media(min-width: $table-size-min) and (max-width: $destop-size) {
+                padding: 2rem;
+                /* position: relative; */
+                /* left: 4rem; */
+                display: flex;
+            }
             &--img1 {
                 @media(min-width: $table-size-min) {
                     padding-right: 0rem;
@@ -368,12 +417,18 @@
             }
         }
         &__logo {
+            display: block;
+            color: #FFFFFF;
+            text-decoration: none;
+            height: auto;
+            width: 150px;
+            margin-top: 1rem;
+            @include tablet-footerLogo;
             &--change {
                 position: relative;
-                top: 26.5rem;
-                @media(min-width: $table-size-min) {
-                    padding: 1rem 3rem;
-                    align-self: start;
+                top: 29rem;
+                @media(min-width: $table-size-min) and (max-width: $destop-size) {
+                    padding: 2rem 20rem;
                     position: relative;
                     top: 0rem;
                     font-size: 14px;
@@ -381,6 +436,7 @@
             }
         }
         &__address {
+            //white-space: nowrap;
             @media(min-width: $table-size-min) {
                 padding-bottom: 1rem;
             }
@@ -389,15 +445,31 @@
                 color: #FFFFFF;
             }
         }
+        &__address1 {
+            @media(min-width: $table-size-min) {
+                padding-right: 1rem;
+            }
+        }
+        &__address2 {
+            @media(min-width: $table-size-min) {
+                padding-right: 15rem;
+            }
+        }
         &__space {
             padding-top: 2rem;
             font-weight: 400;
+            font-size: 12px;
+            white-space: nowrap;
+            line-height: 5rem;
+            @media(min-width: $table-size-min) and (max-width: $destop-size) {
+                font-size: 16px;
+                font-weight: 500;
+            }
         }
         &__info {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            line-height: 18px;
             @media(min-width: $table-size-min) {
                 display: flex;
                 flex-direction: row;

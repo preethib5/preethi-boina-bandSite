@@ -1,16 +1,10 @@
-let shows = [
-    { dates: "Mon Sept 06 2021", venu: "Ronald Lane", location: "San Francisco, CA" },
-    { dates: "Tue Sept 21 2021", venu: "Pier 3 East", location: "San Francisco, CA" },
-    { dates: "Fri Oct 15 2021", venu: "View Lounge", location: "San Francisco, CA" },
-    { dates: "Sat Nov 06 2021", venu: "Hyatt Agency", location: "San Francisco, CA" },
-    { dates: "Fri Nov 26 2021", venu: "Moscow Center", location: "San Francisco, CA" },
-    { dates: "Wed Dec 15 2021", venu: "Moscow Center", location: "San Francisco, CA" }
+let shows = [];
 
-];
+const showsSection = document.getElementById("shows");
+const API_KEY = "d6a098da-46ff-4fba-989f-687f81b38ca9";
+
 
 function addShows(object) {
-    const showsSection = document.getElementById("shows");
-
     object.forEach((obj) => {
         let masterDiv1 = document.createElement('div')
         masterDiv1.classList = "shows__containerHeader";
@@ -36,12 +30,15 @@ function addShows(object) {
 
         let dates = document.createElement('div');
         dates.classList.add("shows__date");
-        dates.innerText = obj.dates;
+        let ts = Number(obj.date);
+        let ts_ms = ts;
+        let date_ob = new Date(ts_ms).toDateString();
+        dates.innerText = date_ob;
         masterDiv2.appendChild(dates);
 
         let venu = document.createElement('div');
         venu.classList.add("shows__venu");
-        venu.innerText = obj.venu;
+        venu.innerText = obj.place;
         masterDiv2.appendChild(venu);
 
 
@@ -60,9 +57,18 @@ function addShows(object) {
 
         showsSection.appendChild(masterDiv1);
         showsSection.appendChild(masterDiv2);
-        //console.log(masterDiv1)
-        //console.log(masterDiv2)
-        console.log(showsSection)
     })
 }
-addShows(shows);
+
+
+
+axios
+    .get(`https://project-1-api.herokuapp.com/showdates?api_key=${API_KEY}`)
+    .then((response) => {
+        let res = response.data;
+        shows = res;
+        addShows(shows);
+    })
+    .catch((error) => {
+        console.log(error);
+    });

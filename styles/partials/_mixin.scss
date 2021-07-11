@@ -1,4 +1,31 @@
 @import './variables';
+@mixin mobile-btnLarge {
+    @media (min-width: $mobile-size-min) {
+        width: 75%;
+    }
+}
+
+//heading and image width
+@mixin tablet-heading {
+    @media (min-width: $table-size-min) and (max-width: $table-size-max) {
+        width: 150%;
+    }
+}
+
+@mixin desktop-heading {
+    @media (min-width: $destop-size) {
+        width: 150%;
+    }
+}
+
+//fotter logo
+@mixin tablet-footerLogo {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        width: 150%;
+    }
+}
+
+//
 @mixin tablet-layout {
     @media (min-width: $table-size-min) and (max-width: $table-size-max) {
         display: flex;
@@ -96,13 +123,14 @@
         padding-bottom: 1.5rem;
         padding-right: 1rem;
         padding-left: 1rem;
+        width: 150vw;
     }
 }
 
 @mixin tablet-layout12 {
-    @media (min-width: $table-size-min) {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
         font-size: 36px;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 44px;
     }
 }
@@ -124,9 +152,10 @@
 }
 
 @mixin tablet-container {
-    @media (max-width: $table-size-max) {
-        margin: 5rem;
-        padding: 1%;
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        position: relative;
+        left: 5rem;
+        top: 5rem;
     }
 }
 
@@ -165,9 +194,9 @@
 }
 
 @mixin tablet-commentName {
-    @media (min-width: $table-size-min) {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
         padding-left: 8rem;
-        bottom: 9rem;
+        bottom: 12rem;
     }
 }
 
@@ -195,13 +224,13 @@
 }
 
 @mixin tablet-commentNameInput {
-    @media (min-width: $table-size-min) {
-        width: 400px;
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        width: 800%;
     }
 }
 
 @mixin tablet-comment {
-    @media (min-width: $table-size-min) {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
         padding-left: 8rem;
         position: relative;
         top: 5rem;
@@ -210,9 +239,9 @@
 }
 
 @mixin tablet-commentTextArea {
-    @media (min-width: $table-size-min) {
-        width: 400px;
-        height: 150px;
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        width: 800%;
+        height: 200px;
     }
 }
 
@@ -227,11 +256,11 @@
 }
 
 @mixin tablet-btn {
-    @media (min-width: $table-size-min) {
-        width: 200px;
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        width: 250px;
         position: relative;
-        top: 8rem;
-        right: 13rem;
+        top: 4rem;
+        left: 28.5rem;
     }
 }
 

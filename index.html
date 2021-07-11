@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/bio.css" />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>BAND SITE</title>
 </head>
 
@@ -70,9 +72,9 @@
         <label class="comment-form__name" for="name">
             NAME <input class="comment-form__name--input" type="text" id="name" name="name" placeholder="Enter your name">
         </label>
-        <label class="comment-form__comment" for="bodyText">
+        <label class="comment-form__comment" for="comment">
             COMMENT
-            <textarea class="comment-form__comment--textArea" rows="5" col="30" id="bodyText" name="bodyText" placeholder="Add a new comment"></textarea>
+            <textarea class="comment-form__comment--textArea" rows="5" col="30" id="comment" name="comment" placeholder="Add a new comment"></textarea>
         </label>
         <button class="comment-form__btn" type="submit" id="submit">COMMENT</button>
     </form>
@@ -87,7 +89,7 @@
                     <a href="https://twitter.com/login?lang=en"><img class="footer__social-links--img3" src="./assets/icons/Icon-twitter.svg" /></a>
 
                 </div>
-                <a class="menu__logo" href="./index.html">
+                <a class="footer__logo" href="./index.html">
                     <img class="footer__logo--change" src="./assets/logos/Logo-bandsite.svg" /></a>
             </section>
             <section class="footer__info">
@@ -102,7 +104,7 @@
                 </div>
 
 
-                <div class="footer__address">
+                <div class="footer__address1">
                     <p>Pearl Gregg</p>
                     <p>Limitless Artist Group</p>
                     </br>
@@ -112,7 +114,7 @@
                     <a class="footer__info--email" href="https://outlook.live.com/owa/">pearl.gregg@limitlessag.com</a>
                 </div>
 
-                <div class="footer__address">
+                <div class="footer__address2">
                     <p>Carson Whyte</p>
                     <p>ARCH Entertainment</p>
                     </br>
