@@ -80,6 +80,7 @@
         min-width: 80%;
         align-self: center;
         font-size: 24px;
+        line-height: 32px;
     }
 }
 
@@ -154,33 +155,34 @@
 @mixin tablet-container {
     @media (min-width: $table-size-min) and (max-width: $destop-size) {
         position: relative;
-        left: 5rem;
-        top: 5rem;
+        width: 70vw;
+        top: 4rem;
+        left: 3rem;
     }
 }
 
 @mixin tablet-album {
-    @media (min-width: $table-size-min) {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
         position: relative;
-        top: 10rem;
+        top: 20rem;
         min-height: 150px;
         left: 2rem;
+        width: 60vw !important;
     }
 }
 
 @mixin tablet-header {
-    @media (min-width: $table-size-min) {
-        font-size: 24px;
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        font-size: 36px;
         font-weight: 400;
         line-height: 32px;
     }
 }
 
 @mixin tablet-header1 {
-    @media (min-width: $table-size-min) {
-        font-size: 36px;
-        font-weight: 400;
-        line-height: 44px;
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+        font-size: 60px;
+        font-weight: 600;
     }
 }
 
@@ -225,7 +227,7 @@
 
 @mixin tablet-commentNameInput {
     @media (min-width: $table-size-min) and (max-width: $destop-size) {
-        width: 800%;
+        width: 650%;
     }
 }
 
@@ -240,13 +242,13 @@
 
 @mixin tablet-commentTextArea {
     @media (min-width: $table-size-min) and (max-width: $destop-size) {
-        width: 800%;
+        width: 650%;
         height: 200px;
     }
 }
 
 @mixin tablet-img {
-    @media (min-width: $table-size-min) {
+    @media (min-width: $table-size-min) and (max-width: $destop-size) {
         border-radius: 100%;
         width: 50px;
         height: 50px;
@@ -256,11 +258,20 @@
 }
 
 @mixin tablet-btn {
-    @media (min-width: $table-size-min) and (max-width: $destop-size) {
+    @media (min-width: $table-size-min) {
         width: 250px;
         position: relative;
         top: 4rem;
-        left: 28.5rem;
+        left: 18.5rem;
+    }
+}
+
+@mixin desktop-btn {
+    @media (min-width: 1024px) {
+        width: 250px;
+        position: relative;
+        top: 8rem;
+        left: -11.5rem;
     }
 }
 
@@ -279,7 +290,21 @@
         justify-content: space-evenly;
         position: relative;
         top: 4rem;
-        right: 7.5rem;
+        // right: 7.5rem;
+        color: #AFAFAF;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+@mixin desktop-showsHeaderDisplay {
+    @media (min-width: $destop-size) {
+        visibility: visible;
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        top: 4rem;
+        // right: 7.5rem;
         color: #AFAFAF;
         font-size: 14px;
         font-weight: 400;
@@ -328,6 +353,7 @@
         bottom: 1rem;
         margin-left: .5rem;
         white-space: nowrap;
+        left: 8rem;
     }
 }
 
@@ -336,6 +362,7 @@
         bottom: 1rem;
         margin-left: 5.5rem;
         white-space: nowrap;
+        left: 5.5rem;
     }
 }
 
@@ -344,6 +371,7 @@
         bottom: 1rem;
         margin-left: 5.5rem;
         white-space: nowrap;
+        left: 6rem;
     }
 }
 
@@ -354,6 +382,7 @@
         bottom: 1.5rem;
         margin-left: 5.5rem;
         width: 150px;
+        left: 1rem;
     }
 }
 

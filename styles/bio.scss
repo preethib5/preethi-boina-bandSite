@@ -43,7 +43,7 @@
                 height: auto;
                 margin: 0 auto;
                 position: relative;
-                right: 3rem;
+                // right: 3rem;
             }
         }
         &__list {
@@ -204,7 +204,7 @@
         &__imgs {
             display: flex;
             flex-direction: column;
-            width: 110vw;
+            width: 90vw;
             @include tablet-layout13;
         }
         &__images {
@@ -245,7 +245,7 @@
             @include tablet-commentName;
             &--input {
                 padding: 10px;
-                width: 100%;
+                width: 70vw;
                 height: 50px;
                 border-radius: 5px;
                 border: 1.5px solid #E1E1E1;
@@ -261,7 +261,7 @@
             @include tablet-comment;
             &--textArea {
                 padding: 10px;
-                width: 100%;
+                width: 70vw;
                 height: 100%;
                 border-radius: 5px;
                 border: 1.5px solid #E1E1E1;
@@ -273,7 +273,7 @@
             width: 50px;
             height: 50px;
             @include tablet-img;
-            @include mobile-img;
+            // @include mobile-img;
         }
         &__btn {
             margin-left: 4.5rem;
@@ -285,11 +285,11 @@
             font-weight: 600;
             color: white;
             margin-top: 1rem;
-            width: 100%;
+            width: 70vw;
             height: 50px;
-            @include mobile-btnLarge;
+            //@include mobile-btnLarge;
             @include tablet-btn;
-            // @include mobile-form;
+            @include desktop-btn;
         }
     }
     
@@ -319,6 +319,9 @@
                 color: #000;
                 margin: 1rem;
                 font-weight: 600;
+                white-space: nowrap;
+            }
+            &--date {
                 white-space: nowrap;
             }
         }
@@ -354,7 +357,7 @@
         width: 100%;
         @include tablet-heading;
         @include desktop-heading;
-        @media(min-width: $table-size-min) {
+        @media(min-width: $table-size-min) and (max-width: $destop-size) {
             display: flex;
             padding: 1rem 3rem;
             position: relative;
@@ -428,7 +431,7 @@
                 position: relative;
                 top: 29rem;
                 @media(min-width: $table-size-min) and (max-width: $destop-size) {
-                    padding: 2rem 20rem;
+                    padding: 2rem 10rem;
                     position: relative;
                     top: 0rem;
                     font-size: 14px;
@@ -437,7 +440,7 @@
         }
         &__address {
             //white-space: nowrap;
-            @media(min-width: $table-size-min) {
+            @media(min-width: $table-size-min) and (max-width: $destop-size) {
                 padding-bottom: 1rem;
             }
             &--email {
@@ -446,13 +449,13 @@
             }
         }
         &__address1 {
-            @media(min-width: $table-size-min) {
-                padding-right: 1rem;
+            @media(min-width: $table-size-min) and (max-width: $destop-size) {
+                padding-right: 3rem;
             }
         }
         &__address2 {
-            @media(min-width: $table-size-min) {
-                padding-right: 15rem;
+            @media(min-width: $table-size-min) and (max-width: $destop-size) {
+                padding-right: 20rem;
             }
         }
         &__space {
@@ -475,7 +478,7 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: flex-start;
-                line-height: 18px;
+                line-height: 24px;
             }
             &--email {
                 text-decoration: none;

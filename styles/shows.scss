@@ -13,19 +13,21 @@
 .album {
     display: flex;
     flex-direction: column;
-    height: 55vw;
+    height: 80vw;
     background: linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%), url('../assets/images/hero-shows.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @include tablet-heading;
+    @include desktop-heading;
     &__header {
         font-size: 20px;
         font-weight: 400;
         color: #FFFFFF;
-        padding-left: 1rem;
+        padding-left: 2rem;
         position: relative;
         top: 2rem;
-        left: 3rem;
+        //left: 3rem;
         @include tablet-header;
     }
     &__header1 {
@@ -33,19 +35,19 @@
         font-size: 30px;
         font-weight: 600;
         overflow-wrap: anywhere;
-        width: 10em;
-        padding: 1rem;
+        width: 11em;
+        padding: 2rem;
         position: absolute;
         top: 9rem;
-        left: 3rem;
+        //left: 3rem;
         @include tablet-header1;
     }
     &__iframe {
         position: relative;
-        top: 8rem;
-        width: 50vw;
+        top: 11rem;
+        width: 80vw;
         height: 100px;
-        left: 4rem;
+        left: 2rem;
         @include tablet-album;
     }
 }

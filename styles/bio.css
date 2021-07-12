@@ -97,7 +97,6 @@
   height: auto;
   margin: 0 auto;
   position: relative;
-  right: 3rem;
 }
 .menu__list {
   display: flex;
@@ -239,6 +238,7 @@
     min-width: 80%;
     align-self: center;
     font-size: 24px;
+    line-height: 32px;
   }
 }
 .section__para1 {
@@ -253,6 +253,7 @@
     min-width: 80%;
     align-self: center;
     font-size: 24px;
+    line-height: 32px;
   }
 }
 .section__auth {
@@ -266,6 +267,7 @@
     min-width: 80%;
     align-self: center;
     font-size: 24px;
+    line-height: 32px;
   }
 }
 .section__heading2 {
@@ -365,7 +367,7 @@
 .photos__imgs {
   display: flex;
   flex-direction: column;
-  width: 110vw;
+  width: 90vw;
 }
 @media (min-width: 768px) {
   .photos__imgs {
@@ -431,14 +433,14 @@ label {
 }
 .comment-form__name--input {
   padding: 10px;
-  width: 100%;
+  width: 70vw;
   height: 50px;
   border-radius: 5px;
   border: 1.5px solid #E1E1E1;
 }
 @media (min-width: 768px) and (max-width: 1280px) {
   .comment-form__name--input {
-    width: 800%;
+    width: 650%;
   }
 }
 .comment-form__comment {
@@ -458,14 +460,14 @@ label {
 }
 .comment-form__comment--textArea {
   padding: 10px;
-  width: 100%;
+  width: 70vw;
   height: 100%;
   border-radius: 5px;
   border: 1.5px solid #E1E1E1;
 }
 @media (min-width: 768px) and (max-width: 1280px) {
   .comment-form__comment--textArea {
-    width: 800%;
+    width: 650%;
     height: 200px;
   }
 }
@@ -474,19 +476,13 @@ label {
   width: 50px;
   height: 50px;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .comment-form__image {
     border-radius: 100%;
     width: 50px;
     height: 50px;
     position: absolute;
     left: 6rem;
-  }
-}
-@media (min-width: 768px) {
-  .comment-form__image {
-    position: relative;
-    bottom: 3rem;
   }
 }
 .comment-form__btn {
@@ -499,20 +495,23 @@ label {
   font-weight: 600;
   color: white;
   margin-top: 1rem;
-  width: 100%;
+  width: 70vw;
   height: 50px;
 }
-@media (min-width: 320px) {
-  .comment-form__btn {
-    width: 75%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
   .comment-form__btn {
     width: 250px;
     position: relative;
     top: 4rem;
-    left: 28.5rem;
+    left: 18.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .comment-form__btn {
+    width: 250px;
+    position: relative;
+    top: 8rem;
+    left: -11.5rem;
   }
 }
 
@@ -522,8 +521,9 @@ label {
 @media (min-width: 768px) and (max-width: 1280px) {
   .container {
     position: relative;
-    left: 5rem;
-    top: 5rem;
+    width: 70vw;
+    top: 4rem;
+    left: 3rem;
   }
 }
 .container__commentBox {
@@ -534,8 +534,9 @@ label {
 @media (min-width: 768px) and (max-width: 1280px) {
   .container__commentBox {
     position: relative;
-    left: 5rem;
-    top: 5rem;
+    width: 70vw;
+    top: 4rem;
+    left: 3rem;
   }
 }
 .container__leftPanelImg {
@@ -556,6 +557,9 @@ label {
   color: #000;
   margin: 1rem;
   font-weight: 600;
+  white-space: nowrap;
+}
+.container__rightPanel--date {
   white-space: nowrap;
 }
 .container__comment {
@@ -598,7 +602,7 @@ label {
     width: 150%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .footer {
     display: flex;
     padding: 1rem 3rem;
@@ -689,13 +693,13 @@ label {
 }
 @media (min-width: 768px) and (max-width: 1280px) {
   .footer__logo--change {
-    padding: 2rem 20rem;
+    padding: 2rem 10rem;
     position: relative;
     top: 0rem;
     font-size: 14px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .footer__address {
     padding-bottom: 1rem;
   }
@@ -704,14 +708,14 @@ label {
   text-decoration: none;
   color: #FFFFFF;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .footer__address1 {
-    padding-right: 1rem;
+    padding-right: 3rem;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .footer__address2 {
-    padding-right: 15rem;
+    padding-right: 20rem;
   }
 }
 .footer__space {
@@ -738,7 +742,7 @@ label {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    line-height: 18px;
+    line-height: 24px;
   }
 }
 .footer__info--email {

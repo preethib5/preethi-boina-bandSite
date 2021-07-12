@@ -28,7 +28,7 @@ function addShows(object) {
         let masterDiv2 = document.createElement('div')
         masterDiv2.classList = "shows__containerBody";
 
-        let dates = document.createElement('div');
+        let dates = document.createElement('p');
         dates.classList.add("shows__date");
         let ts = Number(obj.date);
         let ts_ms = ts;
@@ -36,13 +36,13 @@ function addShows(object) {
         dates.innerText = date_ob;
         masterDiv2.appendChild(dates);
 
-        let venu = document.createElement('div');
+        let venu = document.createElement('p');
         venu.classList.add("shows__venu");
         venu.innerText = obj.place;
         masterDiv2.appendChild(venu);
 
 
-        let location = document.createElement('div');
+        let location = document.createElement('p');
         location.classList.add("shows__location");
         location.innerText = obj.location;
         masterDiv2.appendChild(location);
